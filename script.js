@@ -25,11 +25,13 @@ $(document).ready(function() {
     });
 });
 
+var angle = 0;
+
 $(document).ready(function() {
     var btn = $(".reset-btn");
     btn.click(function() {
-      btn.toggleClass("reset-clicked");
-      return false;
+        angle += 360;
+        $(".reset-btn").css({'transform': 'rotate(' + angle + 'deg)'});
     });
 });
 

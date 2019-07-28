@@ -127,7 +127,7 @@ img:hover {
 }
   
 .play-btn:hover {
-    border-color: transparent transparent transparent #404040;
+    border-color: transparent transparent transparent #000000;
 }
 #reset{
     float: right;
@@ -137,10 +137,10 @@ img:hover {
 .reset-btn {
     transition: 1s all ease;
     background: url(../Pomodoro/images/reset.png) no-repeat center;
-    background-size: 60px;
-    opacity: .8;
-    width: 60px;
-    height: 60px;
+    background-size: 70px;
+    opacity: .7;
+    width: 70px;
+    height: 70px;
     border: none;
 }
 .reset-btn:hover{
