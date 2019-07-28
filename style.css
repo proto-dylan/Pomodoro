@@ -1,0 +1,145 @@
+html {
+    background-color: red;
+}
+body {
+    display: block;
+    width: 400px; 
+    margin-left: auto;
+    margin-right: auto; 
+    text-align: center;
+  
+
+}
+#options {
+    
+    margin-bottom: 6px;
+    width: 400px;
+    /*background-color:white;
+    border-radius: 20px 20px 5px 5px;*/
+
+}
+
+p {
+    font-weight: 500;
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+}
+#display {
+    width: 400px;
+    margin-top: 6px;
+    display: inline-block;
+    background-color:white;
+}
+#display p{
+    font-size: 100px !important;
+
+}
+button:focus {
+    outline:none;
+}
+
+
+#options h2{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+img:hover {
+    opacity: 1;
+    
+}
+
+
+
+.up {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: url('../Pomodoro/images/arrow-up.png') no-repeat center;
+    background-size: 40px;
+    opacity: 0.5;
+}
+
+.up:hover {
+    opacity:1;
+}
+
+.down {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: url('../Pomodoro/images/arrow-down.png') no-repeat center;
+    background-size: 40px;
+    opacity: 0.5;
+}
+
+.down:hover {
+    opacity:1;
+}
+
+
+
+#controls {
+    margin-top: 6px;
+    width: 400px;
+    background-color:red;
+}    
+
+#work {
+    display: inline-block;
+    margin-right: 2%;
+    width: 100px;
+    background-color:white;
+    border-radius: 20px 20px 20px 20px;
+
+}
+#break {
+    display: inline-block;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 100px;
+    background-color:white;
+    border-radius: 20px 20px 20px 20px;
+}
+.play {
+    padding-right: 20px;
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 0;
+    height: 60px;
+  
+    border-color: transparent transparent transparent #202020;
+    transition: 100ms all ease;
+    cursor: pointer;
+  
+    border-style: solid;
+    border-width: 37px 0 37px 60px;
+}
+   
+.play.paused {
+    border-style: double;
+    border-width: 0px 0 0px 60px;
+}
+  
+.play:hover {
+    border-color: transparent transparent transparent #404040;
+}
+.reset {
+    background: url('..Pomodoro/images/reset.png') no-repeat center;
+    background-color: initial;
+    border: none;
+    height: 60px;
+    width: 60px;
+    background-size: 60px;
+
+}
+
+
+
+  
+  

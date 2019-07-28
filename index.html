@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="options">
+        <div id="work">
+           <h2>Work</h2>
+            <button id="sessInc" class="up"></button>
+            <p id="sessTime">25</p>
+            <button id="sessDec" class="down"></button>
+        </div>
+        <div id="break">
+            <h2>Break</h2>
+            <button id="breakInc" class="up"></button>
+            <p id="breakTime">5</p>
+            <button id="breakDec" class="down"></button>
+        </div>
+    </div>
+    <div id="controls">
+        <button class="play"></button>
+        <button class="reset"></button>
+    </div>
+    <div id="status">
+        <p id="currentStatus">Werk it</p>
+    </div>
+    <div id="display">
+        <p id="time-display">25:00</p>
+    </div>
+    
+    <script src="script.js"></script> 
+</body>
