@@ -18,12 +18,22 @@ const currentStatus = "work"
 
 
 $(document).ready(function() {
-    var btn = $(".play");
+    var btn = $(".play-btn");
     btn.click(function() {
       btn.toggleClass("paused");
       return false;
     });
 });
+
+$(document).ready(function() {
+    var btn = $(".reset-btn");
+    btn.click(function() {
+      btn.toggleClass("reset-clicked");
+      return false;
+    });
+});
+
+
 
 
 function setTimer(e) {

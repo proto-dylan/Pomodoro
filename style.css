@@ -11,12 +11,8 @@ body {
 
 }
 #options {
-    
     margin-bottom: 6px;
     width: 400px;
-    /*background-color:white;
-    border-radius: 20px 20px 5px 5px;*/
-
 }
 
 p {
@@ -26,6 +22,7 @@ p {
     margin-block-start: 5px;
     margin-block-end: 5px;
 }
+
 #display {
     width: 400px;
     margin-top: 6px;
@@ -83,11 +80,7 @@ img:hover {
 
 
 
-#controls {
-    margin-top: 6px;
-    width: 400px;
-    background-color:red;
-}    
+
 
 #work {
     display: inline-block;
@@ -105,41 +98,60 @@ img:hover {
     background-color:white;
     border-radius: 20px 20px 20px 20px;
 }
-.play {
-    padding-right: 20px;
+#play{
+    float: left;
+    margin-top:20px;
+    margin-left:50px;
+}
+.play-btn {
+
     border: 0;
     background: transparent;
     box-sizing: border-box;
     width: 0;
     height: 60px;
+    
   
     border-color: transparent transparent transparent #202020;
     transition: 100ms all ease;
     cursor: pointer;
   
     border-style: solid;
-    border-width: 37px 0 37px 60px;
+    border-width: 30px 0 30px 60px;
 }
    
-.play.paused {
+.play-btn.paused {
     border-style: double;
     border-width: 0px 0 0px 60px;
+    margin-top: 30px;
 }
   
-.play:hover {
+.play-btn:hover {
     border-color: transparent transparent transparent #404040;
 }
-.reset {
-    background: url('..Pomodoro/images/reset.png') no-repeat center;
-    background-color: initial;
-    border: none;
-    height: 60px;
-    width: 60px;
+#reset{
+    float: right;
+    margin-top:20px;
+    margin-right:50px;
+}
+.reset-btn {
+    transition: 1s all ease;
+    background: url(../Pomodoro/images/reset.png) no-repeat center;
     background-size: 60px;
-
+    opacity: .8;
+    width: 60px;
+    height: 60px;
+    border: none;
+}
+.reset-btn:hover{
+    opacity: 1;
+}
+.reset-clicked {
+    transform: rotate(360deg);
 }
 
 
 
-  
-  
+
+
+
