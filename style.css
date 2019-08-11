@@ -87,7 +87,8 @@ img:hover {
 
 #work {
     display: inline-block;
-    margin-right: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
     width: 100px;
     background-color:white;
     border-radius: 20px 20px 20px 20px;
@@ -95,8 +96,8 @@ img:hover {
 }
 #break {
     display: inline-block;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
     width: 100px;
     background-color:white;
     border-radius: 20px 20px 20px 20px;
