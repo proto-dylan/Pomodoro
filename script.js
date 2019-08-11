@@ -12,11 +12,15 @@ breakDec.addEventListener("click", setTimer);
 const sessTime = document.getElementById("sessTime");
 const breakTime = document.getElementById("breakTime");
 const timeDisplay = document.getElementById("time-display");
+const statusDisplay = document.getElementById("status-display")
 
 var currentStatus = "pause"
 let timer = 1499;
 var timeRef;
 let time = 25;
+let timeBreak = 5;
+var mode = "work";
+var audio = new Audio('sounds/ding.mp3');
 
 function playPause(){
     console.log("Processimg")
@@ -51,12 +55,15 @@ $(document).ready(function() {
             $(".reset-btn").css({'transform': 'rotate(' + angle + 'deg)'});
             clearInterval(timeRef);
             console.log("time: ", time);
-            timeDisplay.textContent = time + ":" + "00";
-            timer = (time * 60)-1;
+            if(mode == "work"){
+                timeDisplay.textContent = time + ":" + "00";
+                timer = (time * 60)-1;
+            }else{
+                timeDisplay.textContent = timeBreak + ":" + "00";
+                timer = (timeBreak * 60)-1;
+            }
         }else {
-            angle += 5;
-            $(".reset-btn").css({'transform': 'rotate(' + angle + 'deg)'});
-            angle -= 5;
+       
         }
 
     });
@@ -93,6 +100,7 @@ function setTimer(e) {
             }
         }
         breakTime.textContent = time;
+        timeBreak = time;
     }
     
 }
@@ -101,6 +109,21 @@ function countdown(){
     clearInterval(timeRef);
     timeRef = setInterval(function() {
         if(currentStatus == "play"){
+            if(timer == 0){
+                if(mode == "work"){
+                    mode = "break";
+                    timer = (timeBreak * 60)-1;
+                    statusDisplay.textContent = "Take-a-Break";
+                    audio.play();
+
+                }else{
+                    mode = "work";
+                    timer = (time * 60) -1;
+                    statusDisplay.textContent = "Werk time";
+                    audio.play();
+                }
+            }
+            
             console.log("timer: ", timer)
             
             var minutes = Math.floor(timer/60);
@@ -114,8 +137,11 @@ function countdown(){
             }else if(minutes>9 || seconds<10){
                 timeDisplay.textContent = minutes + ":" + "0" + seconds;
             }
-            timer -= 1;
+            if(timer != 0){
+                timer -= 1;
+            }
             
+            console.log("mode: " + mode)
         }
     }, 1000)
 }

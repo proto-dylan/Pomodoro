@@ -28,10 +28,13 @@ p {
     margin-top: 6px;
     display: inline-block;
     background-color:white;
+    border-radius: 20px 20px 20px 20px;
 }
-#display p{
+#time-display{
     font-size: 100px !important;
-
+}
+#status-display {
+    font-size : 50px;
 }
 button:focus {
     outline:none;
