@@ -131,12 +131,18 @@ function countdown(){
             var seconds = Math.floor(timer - (minutes * 60));
             console.log("minutes: ", minutes)
             console.log("seconds: ", seconds)
-            if(minutes>9 || seconds>9){
-                timeDisplay.textContent = minutes + ":" + seconds;
-            }else if(minutes<10 || seconds > 9){
-                timeDisplay.textContent = "0" + minutes + ":" + seconds;
-            }else if(minutes>9 || seconds<10){
-                timeDisplay.textContent = minutes + ":" + "0" + seconds;
+            if(minutes!=0){
+                if(minutes>9 || seconds>9){
+                    timeDisplay.textContent = minutes + ":" + seconds;
+                }else if(minutes<10 || seconds > 9){
+                    timeDisplay.textContent = minutes + ":" + seconds;
+                }else if(minutes>9 || seconds<10){
+                    timeDisplay.textContent = minutes + ":" + "0" + seconds;
+                }
+            }else if(seconds>9){
+                timeDisplay.textContent = "0" + ":" + seconds;
+            }else if(seconds<10){
+                timeDisplay.textContent = "0" + ":" + "0" + seconds;
             }
             if(timer != 0){
                 timer -= 1;
