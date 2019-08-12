@@ -81,12 +81,8 @@ function setTimer(e) {
             if(time>1){
                 time -= 1;
             }
-        }
-        if (time < 10) {
-            sessTime.textContent = `0${time}`;
-        } else {
-            sessTime.textContent = time;
-        }
+        }      
+        sessTime.textContent = time;   
         timeDisplay.textContent = time + ":" + "00";
         timer = (time * 60)-1;
         console.log(time)
@@ -98,6 +94,11 @@ function setTimer(e) {
             if(time > 1){
                 time -= 1;
             }
+        }
+        if (time < 10) {
+            breakTime.textContent = `0${time}`;
+        } else {
+            breakTime.textContent = time;
         }
         breakTime.textContent = time;
         timeBreak = time;
